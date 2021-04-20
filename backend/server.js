@@ -10,6 +10,7 @@ dotenv.config({ path: "./backend/config/.env" });
 
 // Bring all the router
 const auth = require("./router/auth");
+const product = require("./router/product");
 
 const app = express();
 
@@ -21,6 +22,7 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/auth", auth);
+app.use("/api/v1/products", product);
 
 
 app.use(notFound);

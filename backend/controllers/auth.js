@@ -14,6 +14,8 @@ exports.register = asyncHandler(async (req, res, next) => {
     password,
   });
 
+  console.log(req.body);
+
   if (user) {
     res.status(201).json({
       _id: user._id,
@@ -25,6 +27,8 @@ exports.register = asyncHandler(async (req, res, next) => {
     throw new Error("Please input the values");
   }
 });
+
+
 
 //@desc Login a user
 //@route POST /api/v1/auth/login
