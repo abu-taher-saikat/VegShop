@@ -3,6 +3,7 @@ const dotenv = require("dotenv");
 const path = require("path");
 const connectDB = require("./config/db");
 const colors = require("colors");
+const {notFound, errorHandler} = require("./middleware/errorMiddleware");
 
 // dotenv.config('./backend/config/.env');
 dotenv.config({ path: "./backend/config/.env" });
@@ -20,6 +21,10 @@ app.get("/", (req, res) => {
 });
 
 app.use("/api/v1/auth", auth);
+
+
+app.use(notFound);
+app.use(errorHandler);
 
 app.listen(
   process.env.PORT,
