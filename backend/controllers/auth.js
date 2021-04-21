@@ -14,6 +14,8 @@ exports.register = asyncHandler(async (req, res, next) => {
     password,
   });
 
+  console.log(req.body);
+
   if (user) {
     res.status(201).json({
       _id: user._id,
@@ -25,6 +27,8 @@ exports.register = asyncHandler(async (req, res, next) => {
     throw new Error("Please input the values");
   }
 });
+
+
 
 //@desc Login a user
 //@route POST /api/v1/auth/login
@@ -48,4 +52,22 @@ exports.login = asyncHandler(async (req, res, next) => {
   }
 });
 
-console.log(typeof generateToken);
+
+
+// @desc Get User profile
+// @route GET /api/v1/auth/profile
+// @access Private
+exports.profile = asyncHandler(async (req,res) => {
+  const user = await User.findById(req.user._id);
+
+  if(user){
+      res.json({
+          _id : user._id,
+          name : user.name,
+          email : user.email,
+      })
+  }else{
+      res.status(404)
+      throw new Error('User not found')
+  }
+})
