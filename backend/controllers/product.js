@@ -29,8 +29,8 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 
 
 
-//@desc Create Product
-//@route POST /api/v1/product/:id
+//@desc Get product by ID
+//@route GET /api/v1/product/:id
 //@access private/admin
 exports.getProductById = asyncHandler(async (req, res, next) => {
 
@@ -75,7 +75,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
 
 
-//@desc update a product
+//@desc update a product by id
 //@route PUT /api/v1/products/:id
 //@access public
 exports.updateProduct = asyncHandler(async (req, res, next) => {
