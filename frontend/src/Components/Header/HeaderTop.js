@@ -5,8 +5,6 @@ import { FaFacebookSquare, FaPinterestP } from 'react-icons/fa';
 import './Header.css';
 
 const HeaderTop = () => {
-
-
     return (
         <div className="headerTop">
             <div className="container">
