@@ -82,3 +82,33 @@
   font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
 }
 /* Demo product */
+
+/* Image offers */
+
+.imageOffers {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  column-gap: 30px;
+  row-gap: 30px;
+  grid-auto-flow: dense;
+}
+
+.imageOffers .img1 {
+  grid-column: span 4;
+}
+.imageOffers .img2 {
+  grid-column: span 4;
+  grid-row: span 2;
+}
+.imageOffers .img3 {
+  grid-column: span 4;
+}
+.imageOffers .img4 {
+  grid-column: span 4;
+}
+.imageOffers .img5 {
+  grid-column: span 4;
+}
+
+/* /* Image offers  */

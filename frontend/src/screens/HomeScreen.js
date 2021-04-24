@@ -1,5 +1,6 @@
 import React from 'react';
 import BestSeller from '../Components/BestSeller';
+import ImageOffers from '../Components/ImageOffers';
 import WebsiteFeature from './../Components/WebsiteFeature';
 
 
@@ -8,6 +9,7 @@ const HomeScreen = () => {
         <div>
             <WebsiteFeature></WebsiteFeature>
             <BestSeller></BestSeller>
+            <ImageOffers></ImageOffers>
         </div>
     )
 }
