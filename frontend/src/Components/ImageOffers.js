@@ -8,7 +8,7 @@ import img5 from '../assets/images/files/banner61_540x.jpg';
 
 const ImageOffers = () => {
     return (
-        <div className="imageOffers container">
+        <div className="imageOffers container mb-4">
             <div className="img img1">
                 <Image src={img1} fluid></Image>
             </div>
