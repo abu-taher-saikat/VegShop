@@ -91,6 +91,12 @@
   grid-template-rows: repeat(2, 193px);
   grid-column-gap: 30px;
   grid-row-gap: 30px;
+  overflow: hidden;
+}
+
+.imageOffers::after {
+  content: "";
+  display: block;
 }
 
 .imageOffers .img1 {
@@ -114,3 +120,51 @@
 }
 
 /* /* Image offers  */
+
+/* nEW Arraivle */
+.NewArraivle {
+}
+.NewArraivle .text__section .heading {
+  font-weight: 700;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+  font-size: 28px;
+  line-height: 32px;
+  color: #2f3237;
+  text-align: center;
+}
+.NewArraivle .text__section .description {
+  font-weight: 400;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+  font-size: 14px;
+  line-height: 18px;
+  color: #666666;
+  text-align: center;
+}
+.NewArraivle .tab__section .active-tabs {
+  color: green;
+  /* background-color: green; */
+}
+
+.NewArraivle .buttons {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  align-items: center;
+}
+/* nEW Arraivle */
+
+/* logo tab */
+.logoTab {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.logoTab img {
+  margin: 0 auto;
+}
+.logoTab span {
+  display: block;
+}
+
+/* Logo tab */
