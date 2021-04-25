@@ -8,6 +8,7 @@ import HomeScreen from "./screens/HomeScreen";
 function App() {
   return (
     <div className="App">
+      <p>dihan abir</p>
       <Header></Header>
       <main className="container">
         <Router>
