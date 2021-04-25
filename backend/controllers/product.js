@@ -29,8 +29,8 @@ exports.createProduct = asyncHandler(async (req, res, next) => {
 
 
 
-//@desc Create Product
-//@route POST /api/v1/product/:id
+//@desc Get product by ID
+//@route GET /api/v1/product/:id
 //@access private/admin
 exports.getProductById = asyncHandler(async (req, res, next) => {
 
@@ -75,7 +75,7 @@ exports.getProducts = asyncHandler(async (req, res, next) => {
 
 
 
-//@desc update a product
+//@desc update a product by id
 //@route PUT /api/v1/products/:id
 //@access public
 exports.updateProduct = asyncHandler(async (req, res, next) => {
@@ -111,3 +111,26 @@ exports.deleteProduct = asyncHandler(async (req, res, next) => {
     })
    
 });
+
+
+
+
+//@desc get all products by userID
+//@route GET /api/v1/products/:userID/all
+//@access public
+exports.getProductsByUserID = asyncHandler(async (req, res, next) => {
+  const userID = req.params.userID;
+  const products = await Product.find({user : userID});
+  console.log(products);
+ 
+   if (products) {
+     res.status(201).json({
+       success : true,
+       count : products.length,
+       products,
+     });
+   } else {
+     res.status(400);
+     throw new Error("Wrong Product id");
+   }
+ });

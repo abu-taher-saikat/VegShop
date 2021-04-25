@@ -1,38 +1,116 @@
-.App {
+/* @import "./Components/Header/Header.css"; */
+
+/* Website feature */
+.websiteFeature {
+  padding: 30px 30px 0;
+  border: 1px solid #e1e1e1;
+  margin-bottom: 50px;
+}
+
+.websiteFeature .boxservice {
+  display: flex;
+  align-items: center;
+  padding-bottom: 20px;
+  justify-content: space-around;
+}
+.websiteFeature .boxservice .image {
+  margin-right: 10px;
+}
+.websiteFeature .boxservice .content {
+  padding-left: 1rem;
+}
+.websiteFeature .boxservice h4 {
+  font-size: 20px;
+  line-height: 20px;
+  font-weight: 700;
+  margin: 0 0 5px;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+}
+.websiteFeature .boxservice .service__desc {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+  font-weight: 400;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+}
+
+/* Website feature */
+
+/* Best seller */
+.bestSeller {
+  margin-bottom: 50px;
+}
+.bestSeller .heading h1 {
+  font-weight: 700;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+  font-size: 28px;
+  line-height: 32px;
+  text-align: center;
+}
+.bestSeller .heading p {
+  font-weight: 400;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+  font-size: 14px;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Best seller */
+
+/* Demo product */
+
+.demoProduct .text__content {
+  text-align: center;
+}
+.demoProduct .iamge {
+  padding-bottom: 30px;
+}
+.demoProduct .category {
+  font-size: 12px;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+}
+.demoProduct .title {
+  font-size: 16px;
+  text-transform: capitalize;
+  font-weight: 500;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+}
+.demoProduct .price {
+  font-size: 15px;
+  font-weight: 400;
+  font-family: "red Hat Display", "Helvetica", "Arial", "sans-serif";
+}
+/* Demo product */
+
+/* Image offers */
+
+.imageOffers {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 193px);
+  grid-column-gap: 30px;
+  grid-row-gap: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.imageOffers .img1 {
+  grid-area: 1 / 1 / 2 / 2;
+}
+.imageOffers .img2 {
+  grid-area: 1 / 2 / 3 / 3;
+}
+.imageOffers .img2 img {
+  /* height: 200px; */
+  height: auto;
+}
+.imageOffers .img3 {
+  grid-area: 1 / 3 / 2 / 4;
+}
+.imageOffers .img4 {
+  grid-area: 2 / 1 / 3 / 2;
+}
+.imageOffers .img5 {
+  grid-area: 2 / 3 / 3 / 4;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+/* /* Image offers  */
