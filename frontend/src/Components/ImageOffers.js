@@ -1,5 +1,6 @@
 import React from 'react';
 import { Image } from 'react-bootstrap';
+import '../App.css';
 import img1 from '../assets/images/files/banner57_540x.jpg';
 import img4 from '../assets/images/files/banner58_540x.jpg';
 import img2 from '../assets/images/files/banner59_540x.jpg';
