@@ -1,3 +1,21 @@
+<<<<<<< HEAD
+import React from "react";
+import BestSeller from "../Components/BestSeller";
+import ImageOffers from "../Components/ImageOffers";
+import NewArraivle from "../Components/NewArraivle";
+import WebsiteFeature from "./../Components/WebsiteFeature";
+
+const HomeScreen = () => {
+  return (
+    <div className="container">
+      <WebsiteFeature></WebsiteFeature>
+      <BestSeller></BestSeller>
+      <ImageOffers></ImageOffers>
+      <NewArraivle></NewArraivle>
+    </div>
+  );
+};
+=======
 import React from 'react';
 import BestSeller from '../Components/BestSeller';
 import Footer from '../Components/Footer/Footer';
@@ -22,5 +40,6 @@ const HomeScreen = () => {
         </>
     )
 }
+>>>>>>> d9ec296104fad4acdbc94822cd8402a2fee09e5a
 
-export default HomeScreen
+export default HomeScreen;

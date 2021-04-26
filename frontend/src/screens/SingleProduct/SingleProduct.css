@@ -1,0 +1,8 @@
+.breadcrumb-item.active {
+  color: #9ac100 !important;
+}
+.breadcrumb-item a {
+  color: #8d9094;
+  text-decoration: none;
+  background-color: transparent;
+}
