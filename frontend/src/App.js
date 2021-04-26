@@ -1,10 +1,9 @@
 // import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route } from 'react-router-dom';
-import './App.css';
-import './bootstrap.min.css';
-import Header from './Components/Header/Header';
-import HomeScreen from './screens/HomeScreen';
-
+import { BrowserRouter as Router, Route } from "react-router-dom";
+import "./App.css";
+import "./bootstrap.min.css";
+import Header from "./Components/Header/Header";
+import HomeScreen from "./screens/HomeScreen";
 
 function App() {
   return (
