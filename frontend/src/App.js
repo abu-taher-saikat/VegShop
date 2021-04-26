@@ -10,6 +10,7 @@ import SingleProduct from "./screens/SingleProduct/SingleProduct";
 
 function App() {
   return (
+<<<<<<< HEAD
     <Router>
       <div className="App">
         <Header></Header>
@@ -23,6 +24,16 @@ function App() {
         </main>
       </div>
     </Router>
+=======
+    <div className="App">
+        <Header></Header>
+        <main>
+            <Router>
+              <Route to="/" exact component={HomeScreen}></Route>
+            </Router>
+        </main>
+    </div>
+>>>>>>> d9ec296104fad4acdbc94822cd8402a2fee09e5a
   );
 }
 
