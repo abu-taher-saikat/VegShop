@@ -6,6 +6,9 @@
   border: 1px solid #e1e1e1;
   margin-bottom: 50px;
 }
+.no-padding {
+  padding: 0px 10px !important;
+}
 
 .websiteFeature .boxservice {
   display: flex;

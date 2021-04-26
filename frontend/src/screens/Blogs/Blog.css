@@ -1,0 +1,48 @@
+.blog .img1 {
+  margin: 20px 0px;
+  padding: 20px;
+  border: 1px solid;
+  height: 35vh;
+}
+
+h6.blog-title {
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 20px;
+  font-family: "Red Hat Display";
+}
+
+p.dateOfPost {
+  font-size: 14px;
+  font-family: revert;
+  font-weight: 400;
+  color: #8c8c8c;
+  line-height: 20px;
+}
+
+p.description {
+  font-family: "Red Hat Display";
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 400;
+  color: #666666;
+}
+.ten-padding {
+  padding: 0px 10px !important;
+}
+
+button.btn.btn-blog {
+  font-family: "Red Hat Display";
+  border-radius: 25px;
+  font-weight: 500;
+  font-size: 17px;
+  color: #9bc200;
+  padding: 10px 35px;
+  border: 1px solid #d4d4d4 !important;
+}
+
+button.btn.btn-blog:hover {
+  color: #ffffff;
+  background-color: #9cc106;
+  border: 1px solid #d2d2ce;
+}
