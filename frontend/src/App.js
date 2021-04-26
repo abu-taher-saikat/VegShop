@@ -10,7 +10,7 @@ function App() {
   return (
     <div className="App">
         <Header></Header>
-        <main className="container">
+        <main>
             <Router>
               <Route to="/" exact component={HomeScreen}></Route>
             </Router>
