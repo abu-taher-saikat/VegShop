@@ -4,7 +4,7 @@ import Footer from '../Components/Footer/Footer';
 import ImageOffers from "../Components/ImageOffers";
 import LatestBlogPost from '../Components/LatestBlogPost';
 import LogoList from "../Components/LogoList";
-// import NewArraivle from "../Components/NewArraivle";
+import NewArraivle from "../Components/NewArraivle";
 import WebsiteFeature from "./../Components/WebsiteFeature";
 
 const HomeScreen = () => {
@@ -14,9 +14,9 @@ const HomeScreen = () => {
         <WebsiteFeature></WebsiteFeature>
         <BestSeller></BestSeller>
         <ImageOffers></ImageOffers>
+        <NewArraivle></NewArraivle>
         <LogoList></LogoList>
         <LatestBlogPost></LatestBlogPost>
-        {/* <NewArraivle></NewArraivle> */}
         </div>
         <Footer></Footer>
     </>

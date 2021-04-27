@@ -125,6 +125,33 @@
 /* /* Image offers  */
 
 /* nEW Arraivle */
+.newArriavleTab ul {
+  margin: 20px 0 30px;
+  padding: 0px;
+  position: relative;
+  text-align: center;
+}
+.newArriavleTab ul li {
+  display: inline-block;
+  position: relative;
+}
+.newArriavleTab li.active a {
+  color: #9ac100 !important;
+}
+.newArriavleTab li a {
+  color: #2f3237;
+  padding: 0 30px;
+  font-size: 16px;
+  margin: 0 auto;
+  display: block;
+  font-weight: 700;
+  text-decoration: none;
+  background-color: transparent;
+}
+.newArriavleTab .buttonName {
+  display: block;
+  text-decoration: uppercase;
+}
 /* .NewArraivle {
 } */
 .NewArraivle .text__section .heading {
