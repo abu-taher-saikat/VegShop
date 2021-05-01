@@ -28,7 +28,7 @@ function ProductScreen() {
           <Row>
             {products.map((product) => (
               <Col>
-                <Link to={`/singleProduct/${product._id}`}>
+                <Link to={`/${product._id}`}>
                   <Card className="border" style={{ width: "18rem" }}>
                     <ListGroup variant="flush">
                       <ListGroup.Item>{product.title}</ListGroup.Item>

@@ -1,15 +1,24 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-
+import { useDispatch, useSelector } from "react-redux";
 import "./SingleProduct.css";
 import vegitable from "../../assets/images/vegitable/oriol-portell-bHdiBIWrtTE-unsplash.jpg";
 import { Tab, Tabs } from "react-bootstrap";
-import { useParams } from "react-router";
+// import { useParams } from "react-router";
+import { productDetails } from "../../actions/productActions";
 
-function SingleProduct() {
+function SingleProduct({ match }) {
+  const dispatch = useDispatch();
+
+  const singleProduct = useSelector((state) => state.singleProduct);
+  const { loading, error, product } = singleProduct;
+
   const [count, setCount] = useState(1);
-  const { id } = useParams();
-  console.log(id);
+  console.log(product);
+
+  useEffect(() => {
+    dispatch(productDetails(match.params.id));
+  }, [dispatch, match.params.id]);
 
   return (
     <div className="container-fluid">
@@ -19,70 +28,71 @@ function SingleProduct() {
         <Breadcrumb.Item href="#">Library</Breadcrumb.Item>
         <Breadcrumb.Item active>Data</Breadcrumb.Item>
       </Breadcrumb>
+      {loading ? (
+        "loading"
+      ) : (
+        <section className="container">
+          <div className="row" style={{ margin: "6rem 0px" }}>
+            <div className="col-6">
+              <div
+                style={{ padding: "0px 3px", width: "100%" }}
+                className="border  img"
+              >
+                <img
+                  style={{ height: "100vh", width: "90vh", objectFit: "cover" }}
+                  className="img-fluid"
+                  src={vegitable}
+                  alt="vegitable "
+                />
+              </div>
+            </div>
+            <div className="border  col-6">
+              <div
+                style={{ height: "80vh", padding: "0px 30px", width: "100%" }}
+                className=" img"
+              >
+                <h1>{product.title}</h1>
+                {/* <h1>{product.product.title}</h1> */}
+                <h6>*****(0)</h6>
+                {/* <h4>{product.product.price}</h4> */}
+                <p>{product.description}</p>
+                <small>
+                  Availability: <span> In stock</span>
+                </small>
+                <h5>SKU: N/A</h5>
+                {/* cart number  */}
+                <div className="d-flex">
+                  <div className="count d-flex">
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => setCount(count + 1)}
+                    >
+                      +
+                    </button>
+                    <p>{count}</p>
+                    <button
+                      className="btn btn-primary"
+                      onClick={() => setCount(count + 1)}
+                    >
+                      -
+                    </button>
+                  </div>
+                  <button>Add to Cart </button>
+                </div>
+                <hr />
+                {/* cart number  */}
+                <p className="collection">
+                  Collections: Fruit Products, Home page
+                </p>
+                <p className="share">Share: </p>
+              </div>
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* product page design */}
-      <section className="container">
-        <div className="row" style={{ margin: "6rem 0px" }}>
-          <div className="col-6">
-            <div
-              style={{ padding: "0px 3px", width: "100%" }}
-              className="border  img"
-            >
-              <img
-                style={{ height: "100vh", width: "90vh", objectFit: "cover" }}
-                className="img-fluid"
-                src={vegitable}
-                alt="vegitable "
-              />
-            </div>
-          </div>
-          <div className="border  col-6">
-            <div
-              style={{ height: "80vh", padding: "0px 30px", width: "100%" }}
-              className=" img"
-            >
-              <h1>Replica Organic</h1>
-              <h6>*****(0)</h6>
-              <h4>$25.00</h4>
-              <p>
-                Typi non habent claritatem insitam, est usus legentis in iis qui
-                facit eorum claritatem. Investigationes demonstraverunt lectores
-                legere me lius quod ii legunt saepius. Claritas est etiam
-                processus.
-              </p>
-              <small>
-                Availability: <span> In stock</span>
-              </small>
-              <h5>SKU: N/A</h5>
-              {/* cart number  */}
-              <div className="d-flex">
-                <div className="count d-flex">
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    +
-                  </button>
-                  <p>{count}</p>
-                  <button
-                    className="btn btn-primary"
-                    onClick={() => setCount(count + 1)}
-                  >
-                    -
-                  </button>
-                </div>
-                <button>Add to Cart </button>
-              </div>
-              <hr />
-              {/* cart number  */}
-              <p className="collection">
-                Collections: Fruit Products, Home page
-              </p>
-              <p className="share">Share: </p>
-            </div>
-          </div>
-        </div>
-      </section>
+
       <div className="container">
         <Tabs
           defaultActiveKey="home"
