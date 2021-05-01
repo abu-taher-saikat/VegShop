@@ -30,6 +30,8 @@ function SingleProduct({ match }) {
       </Breadcrumb>
       {loading ? (
         "loading"
+      ) : error ? (
+        <h3>{error}</h3>
       ) : (
         <section className="container">
           <div className="row" style={{ margin: "6rem 0px" }}>
