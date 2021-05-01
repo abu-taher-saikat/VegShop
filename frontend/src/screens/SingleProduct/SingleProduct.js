@@ -4,9 +4,12 @@ import Breadcrumb from "react-bootstrap/Breadcrumb";
 import "./SingleProduct.css";
 import vegitable from "../../assets/images/vegitable/oriol-portell-bHdiBIWrtTE-unsplash.jpg";
 import { Tab, Tabs } from "react-bootstrap";
+import { useParams } from "react-router";
 
 function SingleProduct() {
   const [count, setCount] = useState(1);
+  const { id } = useParams();
+  console.log(id);
 
   return (
     <div className="container-fluid">

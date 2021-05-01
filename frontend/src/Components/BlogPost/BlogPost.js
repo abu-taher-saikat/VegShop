@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import { render } from "react-dom";
+// import { render } from "react-dom";
 import { EditorState } from "draft-js";
 import { Editor } from "react-draft-wysiwyg";
 
@@ -15,7 +15,8 @@ class EditorContainer extends Component {
     };
   }
 
-  onEditorStateChange: Function = (editorState) => {
+  // onEditorStateChange: Function = (editorState) => {
+  onEditorStateChange = (editorState) => {
     // console.log(editorState)
     this.setState({
       editorState,
