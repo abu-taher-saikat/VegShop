@@ -1,93 +1,91 @@
 import React, { useState } from 'react';
-import { Col, Row } from 'react-bootstrap';
-import veg from '../assets/images/files/coll51_45x45.png';
-import drinks from '../assets/images/files/coll52_45x45.png';
-import fresh from '../assets/images/files/coll53_45x45.png';
-import fruits from '../assets/images/files/coll54_45x45.png';
-import salad from '../assets/images/files/coll55_45x45.png';
-import bread from '../assets/images/files/coll56_45x45.png';
-import LogoTab from './newArrive/LogoTab';
+import { Image } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
+import items from '../assets/data';
+import img6 from '../assets/images/files/bread.png';
+import img5 from '../assets/images/files/drinks.png';
+import img2 from '../assets/images/files/fruit.png';
+import img3 from '../assets/images/files/meat.png';
+import img4 from '../assets/images/files/salad.png';
+import img1 from '../assets/images/files/veg.png';
+
 
 const NewArrivelTab = () => {
-    const [toggleState , setToggleState] = useState(1);
+    const [selected, setSelected] = useState("vegetable");
+    
 
-    const toggleTab = (index) => {
-        setToggleState(index);
-    }
+
+    const buttons = [
+        {
+          name: "vegetable",
+          image:
+            `${img1}`
+        },
+        {
+          name: "fruits",
+          image: img2
+        },
+        {
+          name: "fish&meats",
+          image: img3
+        },
+        {
+          name: "salad",
+          image: img4
+        },
+        {
+          name: "drink",
+          image: img5
+        },
+        {
+          name: "bread",
+          image: img6
+        },
+      ];
+
+    const filteredItems = items.filter(
+        (item) => item.category === selected
+      );
+
+      
     return (
-        <>
-            <Row className="buttons justify-content-center">
-                <Col className="block-tabs" onClick={() => toggleTab(1)}>
-                <LogoTab img={veg} text="Vegitable"></LogoTab>
-                </Col>
-                <Col className="block-tabs" onClick={() => toggleTab(2)}>
-                <LogoTab img={drinks} text="Drinks"></LogoTab>
-                </Col>
-                <Col className="block-tabs" onClick={() => toggleTab(3)}>
-                <LogoTab img={fresh} text="Fresh foods"></LogoTab>
-                </Col>
-                <Col className="block-tabs" onClick={() => toggleTab(4)}>
-                <LogoTab img={fruits} text="Fresh foods"></LogoTab>
-                </Col>
-                <Col className="block-tabs" onClick={() => toggleTab(5)}>
-                <LogoTab img={salad} text="Fresh foods"></LogoTab>
-                </Col>
-                <Col className="block-tabs" onClick={() => toggleTab(6)}>
-                <LogoTab img={bread} text="Fresh foods"></LogoTab>
-                </Col>
-            </Row>
+        <div className="newArriavleTab">
+            <div className="content">
+                <ul className>
+                    {buttons.map((button) => (
+                        <li
+                            onClick={() => {
+                            setSelected(button.name);
+                            console.log(button);
+                            }}
+                        >   <Link to="">
+                                <Image src={button.image} alt="" />
+                                <span className="buttonName">{button.name}</span>
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
 
-                <div>
-                    <div className={toggleState === 1 ? "tabs active-tabs" : "tabs"}>
-                        <h2>Content 1</h2>
-                        <hr />
-                        <p>
-                            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-                            praesentium.
-                        </p>
+
+
+
+                <div className="container">
+                    {filteredItems.map((item) => (
+                    <div className="row mb-5 container">
+                        <div className="col-6 project-description" data-aos="fade-left">
+                            <div className="description-div  p-4">
+                                <h5>
+                                <b>{item.title}</b>
+                                </h5>
+                                <p>{item.desc}</p>
+                            </div>
+                        </div>
                     </div>
-                    <div className={toggleState === 2 ? "tabs active-tabs" : "tabs"}>
-                        <h2>Content 2</h2>
-                        <hr />
-                        <p>
-                            Lorem 2 ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-                            praesentium.
-                        </p>
-                    </div>
-                    <div className={toggleState === 3 ? "tabs active-tabs" : "tabs"}>
-                        <h2>Content 3</h2>
-                        <hr />
-                        <p>
-                            Lorem 3 ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-                            praesentium.
-                        </p>
-                    </div>
-                    <div className={toggleState === 4 ? "tabs active-tabs" : "tabs"}>
-                        <h2>Content 3</h2>
-                        <hr />
-                        <p>
-                            Lorem 3 ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-                            praesentium.
-                        </p>
-                    </div>
-                    <div className={toggleState === 5 ? "tabs active-tabs" : "tabs"}>
-                        <h2>Content 3</h2>
-                        <hr />
-                        <p>
-                            Lorem 3 ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-                            praesentium.
-                        </p>
-                    </div>
-                    <div className={toggleState === 6 ? "tabs active-tabs" : "tabs"}>
-                        <h2>Content 3</h2>
-                        <hr />
-                        <p>
-                            Lorem 4 ipsum dolor sit amet consectetur, adipisicing elit. Dolor,
-                            praesentium.
-                        </p>
-                    </div>
+                    ))}
+                    
                 </div>
-        </>
+                </div>
+            </div>        
     )
 }
 
