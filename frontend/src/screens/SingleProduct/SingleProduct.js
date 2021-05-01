@@ -1,11 +1,11 @@
 import React, { useState, useEffect } from "react";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
 import { useDispatch, useSelector } from "react-redux";
 import "./SingleProduct.css";
 import vegitable from "../../assets/images/vegitable/oriol-portell-bHdiBIWrtTE-unsplash.jpg";
 import { Tab, Tabs } from "react-bootstrap";
 // import { useParams } from "react-router";
 import { productDetails } from "../../actions/productActions";
+import BreadCrumbCustome from "../../Components/BreadCrumb";
 
 function SingleProduct({ match }) {
   const dispatch = useDispatch();
@@ -23,17 +23,13 @@ function SingleProduct({ match }) {
   return (
     <div className="container-fluid">
       {/* breadcrumbs */}
-      <Breadcrumb>
-        <Breadcrumb.Item href="#">Home</Breadcrumb.Item>
-        <Breadcrumb.Item href="#">Library</Breadcrumb.Item>
-        <Breadcrumb.Item active>Data</Breadcrumb.Item>
-      </Breadcrumb>
+      <BreadCrumbCustome />
       {loading ? (
         "loading"
       ) : error ? (
         <h3>{error}</h3>
       ) : (
-        <section className="container">
+        <section className="container-c">
           <div className="row" style={{ margin: "6rem 0px" }}>
             <div className="col-6">
               <div

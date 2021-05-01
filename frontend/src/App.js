@@ -7,6 +7,7 @@ import "./bootstrap.min.css";
 import Header from "./Components/Header/Header";
 import Blogs from "./screens/Blogs/Blogs";
 import HomeScreen from "./screens/HomeScreen";
+import ProductCollection from "./screens/ProductCollection";
 import ProductScreen from "./screens/ProductScreen";
 import SingleProduct from "./screens/SingleProduct/SingleProduct";
 
@@ -22,6 +23,7 @@ function App() {
             {/* <Route exact path="/singleProduct/:id" component={SingleProduct} /> */}
             <Route exact path="/blogs" component={Blogs} />
             <Route exact path="/products" component={ProductScreen} />
+            <Route exact path="/collection" component={ProductCollection} />
             <Route path="/:id" component={SingleProduct} />
             {/* <Route exact path="/blogPost" component={BlogPost} /> */}
           </Switch>
