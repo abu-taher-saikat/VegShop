@@ -2,7 +2,8 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { listProducts } from "../actions/productActions";
 import Loading from "../Components/Loading";
-import Navigation from "./InputRange";
+// import Navigation from "./InputRange";
+import Navigation from './InputRange';
 import Single from "./singleProductComponent";
 
 function ShopSidebar() {

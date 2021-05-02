@@ -160,3 +160,77 @@
 .headerMiddle .numAndInput .numbers .wrap span {
   font-weight: 400 !important;
 }
+
+/* Main Header */
+.headerMain {
+  background-color: white;
+}
+.headerMain .headerMenuInter::before {
+  content: "";
+  display: table;
+}
+.headerMain .headerMenuInter::after {
+  content: "";
+  display: table;
+}
+
+.headerMain .headerMenu .headerMenuInter {
+  position: relative;
+}
+.headerMain .headerMenu .dropdown {
+  position: relative;
+  /* display: inline-block; */
+}
+.headerMain .headerMenu .dropdown .dropDownContent {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  padding: 12px 16px;
+  z-index: 1;
+}
+
+/* .dropdown:hover .dropDownContent {
+  display: block;
+} */
+
+.headerMain .top-content {
+  display: flex;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  list-style-type: none;
+}
+
+.headerMain .headerMain .menu-container .top-content .top-content-li {
+  display: inline-block;
+}
+.headerMain .headerMain .menu-container .top-content {
+  list-style-type: none !important;
+}
+
+.headerMain .dropdown span {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.headerMain .top-content-li span {
+  font-family: "Red Hat Display", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+}
+.headerMain .innerMenu-content {
+  display: block;
+  position: absolute;
+  z-index: 10;
+  background-color: white;
+  border: 1px solid black;
+
+  width: 170px;
+}
+.headerMain .innerMenu-content li {
+  list-style-type: none;
+}
+
+/* Main Header */
