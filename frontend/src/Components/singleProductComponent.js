@@ -29,7 +29,7 @@ function Single({ product }) {
         <small>{product._id}</small>
         <p>{product.price}</p>
         <ListGroup.Item>{product.description}</ListGroup.Item>
-        <div className="d-flex">
+        <div className="review d-flex">
           <BsFillStarFill />
           <BsFillStarFill />
           <BsFillStarFill />
