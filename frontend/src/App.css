@@ -11,10 +11,25 @@
 }
 /* spinner  */
 
+/* common css  */
 .container-c {
   margin: 0 auto;
   width: 90% !important;
 }
+svg {
+  color: #ffae00 !important;
+}
+
+.btn-cust {
+  color: white;
+  background-color: #9ac100;
+  border: none;
+  border-radius: 20px;
+  font-size: 17px;
+  padding: 6px 40px;
+  margin: 20px 0px 5rem;
+}
+/* common css  */
 
 /* Website feature */
 .websiteFeature {
@@ -426,3 +441,71 @@
 }
 
 /* Product side bar  */
+
+/* Slider.css */
+/* Slider.css */
+
+.slider {
+  margin-bottom: 40px;
+}
+
+.slider label {
+  color: #888;
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+  display: block;
+  text-transform: capitalize;
+}
+
+.input-range__slider {
+  background: #e27a3f;
+  border: none;
+}
+
+.input-range__track {
+  background: #ddd;
+}
+
+.input-range__track--active {
+  background: #9ac100;
+}
+
+.input-range__label--value .input-range__label-container {
+  background: #9ac100;
+  color: white;
+  font-size: 0.65rem;
+  padding: 2px 5px;
+  border-radius: 2px;
+}
+
+.input-range__label--min .input-range__label-container,
+.input-range__label--max .input-range__label-container {
+  font-size: 0.65rem;
+  color: #888;
+  left: 0;
+}
+
+.input-range__label--max .input-range__label-container {
+  left: 25%;
+}
+.input-range__slider {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #ffffff !important;
+  border: 5px solid #9ac100 !important;
+}
+
+.input-range__track--active {
+  background: #9ac100 !important;
+}
+
+/* Slider.css */
+
+/* Navigation.css */
+
+.navigation {
+  flex-basis: 20%;
+  min-width: 100%;
+}
+/* navigation */
