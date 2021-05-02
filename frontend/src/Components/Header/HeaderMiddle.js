@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Container, Row } from "react-bootstrap";
-import { BsPersonFill, BsSearch } from "react-icons/bs";
-import { FiPhoneCall, FiShoppingBag } from "react-icons/fi";
+import { Col, Container, Row } from 'react-bootstrap';
+import { BsPersonFill, BsSearch } from 'react-icons/bs';
+import { FiPhoneCall, FiShoppingBag } from 'react-icons/fi';
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/files/logo.svg";
 import "./Header.css";

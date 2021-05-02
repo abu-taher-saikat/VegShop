@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderFooter from './HeaderFooter';
+import HeaderMain from './HeaderMain';
 import HeaderMiddel from './HeaderMiddle';
 import HeaderTop from './HeaderTop';
 
@@ -8,7 +8,7 @@ const Header = () => {
         <>  
             <HeaderTop/>
             <HeaderMiddel/>
-            <HeaderFooter/>
+            <HeaderMain/>
         </>
     )
 }
