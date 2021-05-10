@@ -21,10 +21,10 @@ function App() {
           <Switch>
             <Route exact path="/" component={HomeScreen} />
             {/* <Route exact path="/singleProduct/:id" component={SingleProduct} /> */}
-            <Route exact path="/blogs" component={Blogs} />
             <Route exact path="/products" component={ProductScreen} />
+            <Route path="/product/:id" component={SingleProduct} />
+            <Route exact path="/blogs" component={Blogs} />
             <Route exact path="/collection" component={ProductCollection} />
-            <Route path="/:id" component={SingleProduct} />
             {/* <Route exact path="/blogPost" component={BlogPost} /> */}
           </Switch>
         </main>

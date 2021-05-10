@@ -1,13 +1,14 @@
-import React, { useState, useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import "./SingleProduct.css";
-import vegitable from "../../assets/images/vegitable/oriol-portell-bHdiBIWrtTE-unsplash.jpg";
+import React, { useEffect, useState } from "react";
 import { Tab, Tabs } from "react-bootstrap";
+import { useDispatch, useSelector } from "react-redux";
 // import { useParams } from "react-router";
 import { productDetails } from "../../actions/productActions";
+import vegitable from "../../assets/images/vegitable/oriol-portell-bHdiBIWrtTE-unsplash.jpg";
 import BreadCrumbCustome from "../../Components/BreadCrumb";
+import "./SingleProduct.css";
 
 function SingleProduct({ match }) {
+  // console.log(`match.params.id`, match.params.id)
   const dispatch = useDispatch();
 
   const singleProduct = useSelector((state) => state.singleProduct);
@@ -24,11 +25,11 @@ function SingleProduct({ match }) {
     <div className="container-fluid">
       {/* breadcrumbs */}
       <BreadCrumbCustome />
-      {loading ? (
+      {/* {loading ? (
         "loading"
       ) : error ? (
         <h3>{error}</h3>
-      ) : (
+      ) : ( */}
         <section className="container-c">
           <div className="row" style={{ margin: "6rem 0px" }}>
             <div className="col-6">
@@ -49,11 +50,11 @@ function SingleProduct({ match }) {
                 style={{ height: "80vh", padding: "0px 30px", width: "100%" }}
                 className=" img"
               >
-                <h1>{product.title}</h1>
+                <h1>id: {!product._id ? loading : product._id}</h1>
                 {/* <h1>{product.product.title}</h1> */}
                 <h6>*****(0)</h6>
                 {/* <h4>{product.product.price}</h4> */}
-                <p>{product.description}</p>
+                {/* <p>{product.description}</p> */}
                 <small>
                   Availability: <span> In stock</span>
                 </small>
@@ -87,7 +88,7 @@ function SingleProduct({ match }) {
             </div>
           </div>
         </section>
-      )}
+      {/* )} */}
 
       {/* product page design */}
 

@@ -56,7 +56,6 @@ const NewArrivelTab = () => {
                         <li
                             onClick={() => {
                             setSelected(button.name);
-                            console.log(button);
                             }}
                         >   <Link to="">
                                 <Image src={button.image} alt="" />
@@ -65,9 +64,6 @@ const NewArrivelTab = () => {
                         </li>
                     ))}
                 </ul>
-
-
-
 
                 <div className="container">
                     {filteredItems.map((item) => (
