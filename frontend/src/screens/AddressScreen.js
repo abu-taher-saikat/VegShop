@@ -17,7 +17,10 @@ const AddressScreen = () => {
                                      <h5>Already Have an account? <Link to="login">Log in</Link> </h5>
                                  </div>
                                 <Form.Control placeholder="Email or Phone number"></Form.Control>
+                                <Form.Group className="pt-2" controlId="formBasicCheckbox1">
                                 <Form.Check type="checkbox" label="Keep me up to date on news and exclusive offers" />
+                                
+                            </Form.Group>
 
                             </Form.Group>
                             <br />
@@ -47,7 +50,7 @@ const AddressScreen = () => {
                                     <Form.Control placeholder="Postal Code" />
                                 </Col>
                             </Row>
-                            <Form.Group className="pt-2" controlId="formBasicCheckbox">
+                            <Form.Group className="pt-2" controlId="formBasicCheckbox2">
                                 <Form.Check type="checkbox" label="	Save this information for next time" />
                             </Form.Group>
 
