@@ -17,7 +17,7 @@ function Single({ product }) {
   const singleProduct = useSelector((state) => state.singleProduct);
   const { loading, product : spDetails, error } = singleProduct;
 
-  console.log(`singleProductDetails`, spDetails)
+  // console.log(`singleProductDetails`, spDetails)
 
   useEffect(()=>{
     dispatch(productDetails(product._id))
