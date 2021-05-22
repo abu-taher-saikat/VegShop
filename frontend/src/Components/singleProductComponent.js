@@ -1,5 +1,5 @@
 import React from "react";
-import { ListGroup } from "react-bootstrap";
+import { Button, ListGroup, Modal } from "react-bootstrap";
 import { BsFillStarFill, BsStarHalf } from "react-icons/bs";
 import { BiStar } from "react-icons/bi";
 
@@ -7,6 +7,9 @@ import image from "../assets/images/products/16_9d5560cf-96ca-4f19-991f-bd9ad52b
 import image1 from "../assets/images/products/11_360x.jpg";
 
 function Single({ product }) {
+  // modal related
+  const [modalShow, setModalShow] = React.useState(false);
+
   return (
     <div className=" text-center pt-3 pb-5">
       <ListGroup variant="flush">
@@ -25,6 +28,19 @@ function Single({ product }) {
             }}
           />
         </div>
+
+        {/* modal  */}
+        <Button variant="primary" onClick={() => setModalShow(true)}>
+          about product
+        </Button>
+
+        <MyVerticallyCenteredModal
+          product={product}
+          show={modalShow}
+          onHide={() => setModalShow(false)}
+        />
+        {/* modal  */}
+
         <ListGroup.Item>{product.title}</ListGroup.Item>
         <small>{product._id}</small>
         <p>{product.price}</p>
@@ -42,3 +58,35 @@ function Single({ product }) {
 }
 
 export default Single;
+
+function MyVerticallyCenteredModal(props) {
+  const { product } = props;
+  return (
+    <Modal
+      {...props}
+      size="lg"
+      aria-labelledby="contained-modal-title-vcenter"
+      centered
+    >
+      <Modal.Header closeButton>
+        <Modal.Title id="contained-modal-title-vcenter">
+          {product._id}
+        </Modal.Title>
+      </Modal.Header>
+      <Modal.Body>
+        <h4>{product.price}</h4>
+        <h4>{product.title}</h4>
+        <h4>{product.category}</h4>
+      </Modal.Body>
+      <Modal.Footer>
+        <Button onClick={props.onHide}>Close</Button>
+      </Modal.Footer>
+    </Modal>
+  );
+}
+
+// <Link className="Link" to="/slider">
+//                     <li className="top-content-li">
+//                       <span>SliderReview</span>{" "}
+//                     </li>
+//                   </Link>

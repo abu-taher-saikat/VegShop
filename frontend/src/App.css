@@ -509,3 +509,9 @@
   min-width: 100%;
 }
 /* navigation */
+
+/* hover button  for cart  */
+.img:hover .hoverCartButton {
+  display: none;
+}
+/* hover button  for cart  */
