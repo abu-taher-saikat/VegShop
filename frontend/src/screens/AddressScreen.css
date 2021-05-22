@@ -1,0 +1,13 @@
+.address .contact-info {
+  display: flex;
+  justify-content: space-around;
+  flex-direction: row;
+}
+.address .contact-info h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.address .contact-info h5 {
+  font-size: 14px;
+  font-weight: 400;
+}

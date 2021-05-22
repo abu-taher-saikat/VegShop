@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { Col, Row } from 'react-bootstrap';
 import { AiFillCaretDown } from 'react-icons/ai';
+import { Link } from 'react-router-dom';
 import './Header.css';
 const HeaderMain = () => {
     const [home, setHome] = useState("none");
@@ -59,7 +60,7 @@ const HeaderMain = () => {
                                             <span>Collections <AiFillCaretDown /></span>
                                             <div style={{display : collection}} className="dropDownContent">
                                                 <ul className="innerMenu-content">
-                                                    <li>home 1</li>
+                                                    <li><Link to="/address">Address</Link></li>
                                                     <li>home 1</li>
                                                     <li>home 1</li>
                                                     <li>home 1</li>
@@ -71,6 +72,7 @@ const HeaderMain = () => {
                                         </div>
                                     </li>
                                     <li className="top-content-li"> <span>Blogs</span></li>
+                                    <Link className='Link' to= '/products'> <li className="top-content-li"> <span>Products</span></li></Link>
                                     <li className="top-content-li"><span>Contacts Us</span> </li>
                                 </ul>
                             </div>

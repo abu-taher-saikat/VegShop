@@ -6,3 +6,27 @@
   text-decoration: none;
   background-color: transparent;
 }
+
+.signleProductComp svg {
+  overflow: hidden;
+  color: #d48f11;
+  vertical-align: middle;
+}
+p.title {
+  font-size: 17px;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: #659875;
+}
+.signleProductComp img {
+  border-radius: 7px;
+}
+
+small.title {
+  font-size: 15px;
+  font-weight: 500;
+  color: #7c7c7c;
+  font-style: normal;
+  font-family: "Montserrat", "Helvetica", "Arial", "sans-serif";
+  text-transform: capitalize;
+}

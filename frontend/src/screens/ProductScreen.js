@@ -11,7 +11,6 @@ function ProductScreen() {
   const dispatch = useDispatch();
   const productList = useSelector((state) => state.productList);
   const { loading, products, error } = productList;
-  // console.log(`products`, products)
 
   useEffect(() => {
     dispatch(listProducts());
