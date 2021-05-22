@@ -1,15 +1,16 @@
 import React from 'react'
-import { Button, Col, Container, Form, Row } from 'react-bootstrap';
+import { Button, Col, Container, Form, Image, Row } from 'react-bootstrap';
 import {Link} from 'react-router-dom';
 import './AddressScreen.css';
+import img1 from '../assets/images/vegitable/joseph-gonzalez-fdlZBWIP0aM-unsplash.jpg'
 
 const AddressScreen = () => {
     return (
         <>
             <Container className="address">
                 <Row>
-                    <Col> 
-                        <Form>
+                    <Col md={7}> 
+                        <Form className="pr-4">
                             <Form.Group>
                                  <div className="contact-info">
                                      <h4>Contact information</h4>
@@ -55,7 +56,60 @@ const AddressScreen = () => {
                             </Button>
                         </Form>
                     </Col>
-                    <Col>2</Col>
+
+                    {/* Right side */}
+                    <Col md={5} className="right__col">
+                        <div className="right__section pl-4">
+                            <div className="">
+                                <Row className="product__row">
+                                    <Col className="d-flex justify-space-between">
+                                        <div className="">
+                                            <Image src={img1}></Image>
+                                            <span className="productName pl-3">Product Name</span>
+                                        </div>
+                                        <div className="productAmount">
+                                            $335.00
+                                        </div>
+                                    </Col>
+                                    <Col className="d-flex justify-space-between">
+                                        <div className="">
+                                            <Image src={img1}></Image>
+                                            <span className="productName pl-3">Product Name</span>
+                                        </div>
+                                        <div className="productAmount">
+                                            $335.00
+                                        </div>
+                                    </Col>
+                                    <Col className="d-flex justify-space-between">
+                                        <div className="">
+                                            <Image src={img1}></Image>
+                                            <span className="productName pl-3">Product Name</span>
+                                        </div>
+                                        <div className="productAmount">
+                                            $335.00
+                                        </div>
+                                    </Col>
+                                </Row>
+                            </div>
+                            <hr />
+                            
+                            <div className="d-flex">
+                                <span>sub total</span>
+                                <span className="ml-auto">$330.00</span>
+                            </div>
+                            <div className="d-flex">
+                                <span>Shipping</span>
+                                <span className="ml-auto">Calculated to the next Step</span>
+                            </div>
+
+                            <hr />
+
+                            <div className="d-flex">
+                                <span>Total</span>
+                                <span className="ml-auto">USD $330.00</span>
+                            </div>
+                        </div>
+                    </Col>
                 </Row>
             </Container>   
         </>
