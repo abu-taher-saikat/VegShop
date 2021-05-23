@@ -1,0 +1,44 @@
+.slider .underlineSlider {
+  display: inline-block;
+  height: 1px;
+  border-radius: 80%;
+  background-image: -webkit-linear-gradient(
+    left,
+    rgba(0, 0, 0, 0),
+    rgb(165, 165, 165),
+    rgba(0, 0, 0, 0)
+  );
+  width: 200px;
+}
+.slider p {
+  color: rgb(43, 43, 43);
+}
+.each-slide > div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  height: 150px;
+}
+
+.each-slide span {
+  padding: 20px;
+  font-size: 20px;
+  background: #efefef;
+  text-align: center;
+}
+.slider img {
+  border-radius: 20px;
+}
+
+h5.slider-comment {
+  font-size: 17px;
+  line-height: 31px;
+  font-weight: 400;
+  color: #888888;
+  font-family: inherit;
+}
+h6.slider-user {
+  font-size: 14px;
+  color: #5a5959;
+}

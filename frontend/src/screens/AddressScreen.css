@@ -1,0 +1,39 @@
+.address .contact-info {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.address .contact-info h4 {
+  font-size: 18px;
+  font-weight: 400;
+}
+.address .contact-info h5 {
+  font-size: 14px;
+  font-weight: 400;
+}
+
+.address .right__section .product__row {
+  display: flex;
+  flex-direction: column;
+}
+.address .right__section .product__row img {
+  width: 60px;
+  height: 60px;
+  border-radius: 5px;
+}
+
+.address .right__col {
+  border-left: 1px solid grey;
+}
+
+.address .right__section .product__row .productName {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bolder;
+  font-size: 14px;
+}
+.address .right__section .product__row .productAmount {
+  font-size: 14px;
+  font-weight: bold;
+  line-height: 70px;
+  margin-left: auto;
+}

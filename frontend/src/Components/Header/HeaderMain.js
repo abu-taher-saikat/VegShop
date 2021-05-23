@@ -2,12 +2,17 @@ import React, { useState } from "react";
 import { Col, Row } from "react-bootstrap";
 import { AiFillCaretDown } from "react-icons/ai";
 import { Link } from "react-router-dom";
-
 import "./Header.css";
 const HeaderMain = () => {
   const [home, setHome] = useState("none");
   const [shop, setShop] = useState("none");
   const [collection, setCollection] = useState("none");
+
+  // import "./Header.css";
+  // const HeaderMain = () => {
+  //   const [home, setHome] = useState("none");
+  //   const [shop, setShop] = useState("none");
+  //   const [collection, setCollection] = useState("none");
 
   return (
     <div className="headerMain">
@@ -84,7 +89,9 @@ const HeaderMain = () => {
                         className="dropDownContent"
                       >
                         <ul className="innerMenu-content">
-                          <li>home 1</li>
+                          <li>
+                            <Link to="/address">Address</Link>
+                          </li>
                           <li>home 1</li>
                           <li>home 1</li>
                           <li>home 1</li>
@@ -99,9 +106,21 @@ const HeaderMain = () => {
                     {" "}
                     <span>Blogs</span>
                   </li>
+                  <Link className="Link" to="/products">
+                    {" "}
+                    <li className="top-content-li">
+                      {" "}
+                      <span>Products</span>
+                    </li>
+                  </Link>
                   <li className="top-content-li">
                     <span>Contacts Us</span>{" "}
                   </li>
+                  <Link className="Link" to="/slider">
+                    <li className="top-content-li">
+                      <span>SliderReview</span>
+                    </li>
+                  </Link>
                 </ul>
               </div>
             </Col>
