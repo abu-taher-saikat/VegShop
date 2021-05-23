@@ -12,3 +12,6 @@ Fontend.
 3.cart page 
 4. product page (dynamic )
 5. review dynamic  
+
+
+# multer image upload on creating product.
