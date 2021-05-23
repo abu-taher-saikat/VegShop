@@ -16,9 +16,6 @@
   margin: 0 auto;
   width: 90% !important;
 }
-.review svg {
-  color: #ffae00 !important;
-}
 
 .btn-cust {
   color: white;
@@ -508,4 +505,3 @@
   flex-basis: 20%;
   min-width: 100%;
 }
-/* navigation */

@@ -1,6 +1,6 @@
 import React from "react";
 import BestSeller from "../Components/BestSeller";
-import Footer from "../Components/Footer/Footer";
+
 import ImageOffers from "../Components/ImageOffers";
 import LatestBlogPost from "../Components/LatestBlogPost";
 import LogoList from "../Components/LogoList";
@@ -28,7 +28,6 @@ const HomeScreen = () => {
         <LogoList></LogoList>
         <LatestBlogPost></LatestBlogPost>
       </div>
-      <Footer></Footer>
     </>
   );
 };

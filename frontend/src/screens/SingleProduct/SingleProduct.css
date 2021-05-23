@@ -7,11 +7,6 @@
   background-color: transparent;
 }
 
-.signleProductComp svg {
-  overflow: hidden;
-  color: #d48f11;
-  vertical-align: middle;
-}
 p.title {
   font-size: 17px;
   text-transform: uppercase;
@@ -30,3 +25,70 @@ small.title {
   font-family: "Montserrat", "Helvetica", "Arial", "sans-serif";
   text-transform: capitalize;
 }
+
+/* svg section */
+.Cart svg {
+  overflow: hidden;
+  color: #d42e11;
+  vertical-align: middle;
+}
+
+.reviewStar svg {
+  color: #ffae00 !important;
+}
+/* svg section */
+
+/* /cart  */
+.cart {
+  margin: 0px 10px;
+  background-color: rgb(224, 224, 224) !important;
+}
+
+/* /cart  */
+
+/* modal  */
+h4.title {
+  color: #0e6919;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: "Red Hat Display";
+}
+
+p.modalPrimary {
+  color: #124a2f;
+  text-decoration: none;
+}
+
+span.stock {
+  color: #1fc115;
+}
+
+span.category {
+  color: #777777;
+  padding-left: 1rem;
+}
+
+h3.price {
+  color: #ec8439;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: "Red Hat Display";
+}
+.modalBtn {
+  padding: 1px 40px;
+  background-color: transparent;
+  color: rgb(88, 189, 88);
+  border: none;
+  border-radius: 10px;
+  font-size: 30px;
+}
+.modal .button {
+  border: 1px solid rgb(136, 136, 136);
+  border-radius: 40px;
+}
+.CountBtn {
+  font-size: 35px !important;
+  color: rgb(31, 31, 31);
+  padding: 5px;
+}
+/* modal  */
