@@ -9,7 +9,7 @@ function CustomeTab() {
         title="Description
 "
       >
-        <div className="border ">
+        <div className="p-4 border ">
           <p>
             Etiam vitae bibend eros praesent a quet, maximus dignissim
             imperdiet, tellus luctus massa augue erat. Fusce egestas mi et lorem
@@ -25,7 +25,7 @@ function CustomeTab() {
         </div>
       </Tab>
       <Tab eventKey="profile" title="Shipping">
-        <div className="border ">
+        <div className="p-3 border ">
           <h4>Returns Policy</h4>
           <p>
             You may return most new, unopened items within 30 days of delivery
@@ -64,11 +64,6 @@ function CustomeTab() {
             the policies of the shipping companies we use, all weights will be
             rounded up to the next full pound.
           </p>
-        </div>
-      </Tab>
-      <Tab eventKey="contact" title="Reviews">
-        <div className="border ">
-          <p>Customer Reviews No reviews yet</p>
         </div>
       </Tab>
     </Tabs>

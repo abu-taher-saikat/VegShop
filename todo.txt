@@ -7,11 +7,15 @@ backend ->
 5. https://codesandbox.io/s/modest-chebyshev-d884f?file=/src/App.js&resolutionWidth=320&resolutionHeight=675
 
 Fontend.
-1. layout design -> login / review / user profile / Feed / admin( aditionla pages ) => baki gula done!
-2. checkout page 
-3.cart page 
-4. product page (dynamic )
-5. review dynamic  
+1. layout design -> login / review / user profile / Feed  => baki gula done! done => / admin( aditionla pages )
+2. checkout page => baki 
+3.cart page => baki 
+=> aditional featuere: 
+image zoom , image gallery 
+
+
+4. product page (dynamic ) done
+5. review dynamic  done 
 
 
 # multer image upload on creating product.

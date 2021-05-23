@@ -1,21 +1,22 @@
 import React, { useEffect, useState } from "react";
-import { Tab, Tabs } from "react-bootstrap";
 import { useDispatch, useSelector } from "react-redux";
 // import { useParams } from "react-router";
 import { productDetails } from "../../actions/productActions";
-import vegitable from "../../assets/images/vegitable/oriol-portell-bHdiBIWrtTE-unsplash.jpg";
 import BreadCrumbCustome from "../../Components/BreadCrumb";
 import CustomeTab from "../../Components/CustomeTab";
+import ReactImageZoom from "react-image-zoom";
+
 import SliderReview from "../../Components/SliderReview";
 import "./SingleProduct.css";
 
 function SingleProduct({ match }) {
+  const props = { width: 400, height: 250, zoomWidth: 500, img: "1.jpg" };
   // console.log(`match.params.id`, match.params.id)
   const dispatch = useDispatch();
 
   const singleProduct = useSelector((state) => state.singleProduct);
-  const { loading, error, product } = singleProduct;
-  const { image, title, discount, description } = product;
+  const { product } = singleProduct;
+  const { image } = product;
 
   const [count, setCount] = useState(1);
   console.log(product);
@@ -36,6 +37,7 @@ function SingleProduct({ match }) {
       <section className="container-c">
         <div className="row" style={{ margin: "6rem 0px" }}>
           <div className="col-6">
+            {/* <ReactImageZoom {...props}> */}
             <div
               style={{ padding: "0px 3px", width: "100%" }}
               className="border  img"
@@ -47,6 +49,7 @@ function SingleProduct({ match }) {
                 alt="vegitable "
               />
             </div>
+            {/* </ReactImageZoom> */}
           </div>
           <div className="border p-3 col-6">
             <h4 className="title pb-4">{product.title}</h4>
