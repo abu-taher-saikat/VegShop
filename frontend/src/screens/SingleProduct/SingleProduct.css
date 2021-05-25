@@ -92,3 +92,38 @@ h3.price {
   padding: 5px;
 }
 /* modal  */
+
+/* product image slider */
+.carousel .thumb img.img-fluid {
+  height: 100% !important;
+}
+.carousel .thumb.selected,
+.carousel .thumb:hover {
+  border: 3px solid #9ac100;
+}
+/* product image slider */
+
+/* review section */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  color: #9ac100;
+  font-size: 20px;
+  background-color: #fff;
+  border-color: #ddd #ddd #fff;
+  font-weight: 600;
+}
+
+.nav-tabs .nav-link {
+  color: black;
+  font-size: 20px;
+  background-color: #fff;
+  font-weight: 600;
+}
+
+.tab-content {
+  display: block;
+  font-weight: 100;
+  color: #a0a0a0;
+}
+
+/* review section */

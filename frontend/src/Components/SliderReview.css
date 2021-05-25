@@ -42,3 +42,9 @@ h6.slider-user {
   font-size: 14px;
   color: #5a5959;
 }
+
+li.thumb.selected,
+li.thumb {
+  width: 80px;
+  height: 80px;
+}

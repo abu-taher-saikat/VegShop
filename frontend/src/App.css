@@ -505,3 +505,50 @@
   flex-basis: 20%;
   min-width: 100%;
 }
+
+/* Navigation.css */
+
+/* Login.css */
+.login {
+  margin: 20px 10px 0px;
+}
+.login .col-6 {
+  padding: 0px;
+  flex: 0 0 50%;
+  max-width: 50%;
+}
+
+input.btn-custome,
+button.text-primary.btn-custome {
+  background: #45c145;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+  margin-top: 15px;
+}
+button.text-primary.btn-custome {
+  color: white !important;
+  border: none;
+  padding: 10px 0px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+button.btn.btn-custome1 {
+  background: #b9c145;
+  color: white;
+  font-weight: 700;
+  font-size: 16px;
+  margin-top: 15px;
+}
+.btn-custome {
+  background: #b9c145;
+  margin-top: 20px;
+  color: white;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  font-size: 20px;
+  margin-top: 15px;
+  padding: 8px 35px;
+}
+/* Login.css */

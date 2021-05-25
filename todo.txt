@@ -19,3 +19,7 @@ image zoom , image gallery
 
 
 # multer image upload on creating product.
+
+
+redux related : 
+loading not working

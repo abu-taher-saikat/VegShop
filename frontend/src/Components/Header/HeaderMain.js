@@ -92,6 +92,9 @@ const HeaderMain = () => {
                           <li>
                             <Link to="/address">Address</Link>
                           </li>
+                          <li>
+                            <Link to="/BlogPost">BlogPost</Link>
+                          </li>
                           <li>home 1</li>
                           <li>home 1</li>
                           <li>home 1</li>

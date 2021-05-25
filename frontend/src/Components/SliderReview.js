@@ -49,8 +49,9 @@ function SliderReview({ title, reviewsHead, reviews }) {
           <Slide easing="ease">
             {reviews
               ? reviews
-              : slideImages.map((user) => (
+              : slideImages.map((user, index) => (
                   <div
+                    key={index}
                     style={{
                       border: "1px solid #e9e9e9",
                       padding: "10px",

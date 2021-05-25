@@ -13,6 +13,8 @@ import ProductCollection from "./screens/ProductCollection";
 import ProductScreen from "./screens/ProductScreen";
 import SingleProduct from "./screens/SingleProduct/SingleProduct";
 import AddressScreen from "./screens/AddressScreen";
+import Login from "./screens/Login";
+import BlogPost from "./Components/BlogPost/BlogPost";
 
 function App() {
   return (
@@ -30,6 +32,8 @@ function App() {
             <Route exact path="/blogs" component={Blogs} />
             <Route exact path="/collection" component={ProductCollection} />
             <Route exact path="/address" component={AddressScreen} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/BlogPost" component={BlogPost} />
             {/* <Route exact path="/blogPost" component={BlogPost} /> */}
           </Switch>
           <Footer></Footer>

@@ -1,7 +1,7 @@
 import React from "react";
-import { Col, Container, Row } from 'react-bootstrap';
-import { BsPersonFill, BsSearch } from 'react-icons/bs';
-import { FiPhoneCall, FiShoppingBag } from 'react-icons/fi';
+import { Col, Container, Row } from "react-bootstrap";
+import { BsPersonFill, BsSearch } from "react-icons/bs";
+import { FiPhoneCall, FiShoppingBag } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import logo from "../../assets/images/files/logo.svg";
 import "./Header.css";
@@ -14,7 +14,7 @@ const HeaderMiddle = () => {
           <Col md={3}>
             <div className="site-logo">
               <Link to="/">
-                <img src={logo} alt="" srcset="" />
+                <img src={logo} alt="" srcSet="" />
               </Link>
             </div>
           </Col>
@@ -55,9 +55,11 @@ const HeaderMiddle = () => {
           </Col>
           <Col md={3}>
             <div className="personAndCart">
-              <div className="person">
-                <BsPersonFill></BsPersonFill>
-              </div>
+              <Link className="Link" to="/login">
+                <div className="person">
+                  <BsPersonFill></BsPersonFill>
+                </div>
+              </Link>
               <div className="cart">
                 <span>
                   <FiShoppingBag></FiShoppingBag> Your Cart
